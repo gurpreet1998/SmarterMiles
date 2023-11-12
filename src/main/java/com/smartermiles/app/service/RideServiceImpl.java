@@ -35,9 +35,10 @@ public class RideServiceImpl implements RideService {
     }
 
     @Override
-    public List<Ride> findAvailableRides(double riderLatitude, double riderLongitude) {
-        // TODO: Implement the logic to find rides based on rider's location
-        // This is just a placeholder and should be replaced with actual logic
-        return rideRepository.findAll();
+    public List<Ride> findAvailableRides(double riderStartLat, double riderStartLong,
+                                         double riderEndLat, double riderEndLong) {
+        return rideRepository.findRidesWithinDriverRadius(riderStartLat, riderStartLong,
+                riderEndLat, riderEndLong);
     }
+
 }

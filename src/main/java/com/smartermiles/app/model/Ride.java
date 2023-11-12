@@ -21,6 +21,7 @@ public class Ride {
     private int totalSeats;
     private int availableSeats;
     private int greenScore; // Environmental impact score
+    private double radius;
 
     // Constructors, getters, and setters
 
@@ -113,5 +114,12 @@ public class Ride {
 
     public void setDriver(Driver driver) {
         this.driver = driver;
+    }
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 }

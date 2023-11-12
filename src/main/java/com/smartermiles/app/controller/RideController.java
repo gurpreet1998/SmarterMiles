@@ -24,11 +24,16 @@ public class RideController {
         return ResponseEntity.ok(createdRide);
     }
 
-    @GetMapping("/search")
+    @GetMapping("/searchAvailableRides")
     public ResponseEntity<List<Ride>> searchAvailableRides(
-            @RequestParam double latitude,
-            @RequestParam double longitude) {
-        List<Ride> availableRides = rideService.findAvailableRides(latitude, longitude);
+            @RequestParam double startLatitude,
+            @RequestParam double startLongitude,
+            @RequestParam double endLatitude,
+            @RequestParam double endLongitude) {
+
+        // Call the updated findAvailableRides method with both start and end location parameters
+        List<Ride> availableRides = rideService.findAvailableRides(startLatitude, startLongitude, endLatitude, endLongitude);
         return ResponseEntity.ok(availableRides);
     }
+
 }

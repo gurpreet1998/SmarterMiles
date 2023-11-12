@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface RideService {
     Ride publishNewRide(RideDTO rideDTO);
-    List<Ride> findAvailableRides(double riderLatitude, double riderLongitude);
+    List<Ride> findAvailableRides(double riderStartLatitude, double riderStartLongitude,
+                                  double riderEndLatitude, double riderEndLongitude);
 }
