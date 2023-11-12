@@ -10,6 +10,7 @@ public class RideDTO {
     private LocalDateTime departureTime;
     private String vehicleType; // "EV" for electric vehicle, "Gas" for gasoline vehicle
     private int totalSeats;
+    private double radius;
 
     // Constructors
     public RideDTO() {
@@ -70,5 +71,12 @@ public class RideDTO {
 
     public void setTotalSeats(int totalSeats) {
         this.totalSeats = totalSeats;
+    }
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 }

@@ -29,6 +29,7 @@ public class RideServiceImpl implements RideService {
         ride.setVehicleType(rideDTO.getVehicleType());
         ride.setTotalSeats(rideDTO.getTotalSeats());
         ride.setAvailableSeats(rideDTO.getTotalSeats()); // Initially all seats are available
+        ride.setRadius(rideDTO.getRadius());
 
         // Save the new ride to the database
         return rideRepository.save(ride);
