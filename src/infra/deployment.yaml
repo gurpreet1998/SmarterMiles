@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smartmiles
+  labels:
+    app: smartmiles
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smartmiles
+  template:
+    metadata:
+      labels:
+        app: smartmiles
+    spec:
+      containers:
+        - name: smartmiles-container
+          image: 506107868744.dkr.ecr.us-west-2.amazonaws.com/dash-service-magnifier:9.9.6
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
