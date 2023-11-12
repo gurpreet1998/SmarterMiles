@@ -2,7 +2,7 @@ package com.smartermiles.app.controller;
 
 import com.smartermiles.app.model.RouteDataResponse;
 import com.smartermiles.app.model.RouteInfoRequest;
-import com.smartermiles.app.repository.RoutingService;
+import com.smartermiles.app.service.RoutingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

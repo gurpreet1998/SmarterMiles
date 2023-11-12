@@ -1,4 +1,4 @@
-package com.smartermiles.app.repository;
+package com.smartermiles.app.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
