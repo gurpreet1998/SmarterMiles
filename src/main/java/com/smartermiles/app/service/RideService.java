@@ -8,4 +8,5 @@ public interface RideService {
     Ride publishNewRide(RideDTO rideDTO);
     List<Ride> findAvailableRides(double riderStartLatitude, double riderStartLongitude,
                                   double riderEndLatitude, double riderEndLongitude);
+    boolean joinRide(Long rideId);
 }

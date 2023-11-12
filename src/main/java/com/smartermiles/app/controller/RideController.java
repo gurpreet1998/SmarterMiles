@@ -35,5 +35,13 @@ public class RideController {
         List<Ride> availableRides = rideService.findAvailableRides(startLatitude, startLongitude, endLatitude, endLongitude);
         return ResponseEntity.ok(availableRides);
     }
-
+    @PostMapping("/{rideId}/join")
+    public ResponseEntity<?> joinRide(@PathVariable Long rideId) {
+        boolean rideJoined = rideService.joinRide(rideId);
+        if (rideJoined) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.badRequest().body("Ride could not be joined, no seats available or ride does not exist.");
+        }
+    }
 }

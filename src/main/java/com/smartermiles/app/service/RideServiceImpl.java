@@ -4,6 +4,8 @@ import com.smartermiles.app.dto.RideDTO;
 import com.smartermiles.app.model.Ride;
 import com.smartermiles.app.repository.RideRepository;
 import com.smartermiles.app.service.RideService;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -40,6 +42,25 @@ public class RideServiceImpl implements RideService {
                                          double riderEndLat, double riderEndLong) {
         return rideRepository.findRidesWithinDriverRadius(riderStartLat, riderStartLong,
                 riderEndLat, riderEndLong);
+    }
+    @Transactional
+    @Override
+    public boolean joinRide(Long rideId) {
+        Ride ride = rideRepository.findById(rideId)
+                .orElseThrow(() -> new EntityNotFoundException("Ride not found"));
+
+        if (ride.getAvailableSeats() > 0) {
+            ride.setAvailableSeats(ride.getAvailableSeats() - 1);
+
+            // Determine the increment based on the type of vehicle
+            int greenScoreIncrement = "EV".equals(ride.getVehicleType()) ? 20 : 10;
+
+            ride.setGreenScore(ride.getGreenScore() + greenScoreIncrement);
+            rideRepository.save(ride);
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
