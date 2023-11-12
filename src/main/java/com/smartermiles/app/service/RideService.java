@@ -1,4 +1,10 @@
 package com.smartermiles.app.service;
 
-public class RideService {
+import com.smartermiles.app.dto.RideDTO;
+import com.smartermiles.app.model.Ride;
+import java.util.List;
+
+public interface RideService {
+    Ride publishNewRide(RideDTO rideDTO);
+    List<Ride> findAvailableRides(double riderLatitude, double riderLongitude);
 }
