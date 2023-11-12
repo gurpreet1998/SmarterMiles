@@ -5,6 +5,9 @@ import java.time.LocalDateTime;
 
 @Entity
 public class Ride {
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "driver_id")
+    private Driver driver;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -102,5 +105,13 @@ public class Ride {
 
     public void setGreenScore(int greenScore) {
         this.greenScore = greenScore;
+    }
+    // Getter and setter for driver
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
     }
 }
