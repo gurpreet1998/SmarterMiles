@@ -10,6 +10,7 @@ Smart Miles was crafted with a tech stack designed for versatility and scalabili
 
 **Link to Submitted Project**
 https://devpost.com/software/smart-miles
+
 <img width="1151" alt="Screenshot 2023-11-14 at 12 09 10 PM" src="https://github.com/gurpreet1998/SmarterMiles/assets/37729999/0749c700-a8cc-4da8-8748-7970077e4265">
 
 <img width="1728" alt="Screenshot 2023-11-14 at 11 59 56 AM" src="https://github.com/gurpreet1998/SmarterMiles/assets/37729999/68576240-2529-4f40-87eb-9bca034a83b0">
@@ -19,4 +20,7 @@ https://devpost.com/software/smart-miles
 <img width="1728" alt="Screenshot 2023-11-14 at 11 59 13 AM" src="https://github.com/gurpreet1998/SmarterMiles/assets/37729999/f9dc02cd-e56d-45d6-a0a1-523d228e864a">
 
 <img width="1728" alt="Screenshot 2023-11-14 at 11 59 09 AM" src="https://github.com/gurpreet1998/SmarterMiles/assets/37729999/141583fd-f34c-4304-a010-ed46746cba46">
+
+
+**Link To Front-End Repo**: https://github.com/Vaibhav-Sachdeva/smarter-miles-inrix-hack-2023
 
