@@ -1,7 +1,8 @@
 SmartMiles: A Safer, Greener, Smarter Commute Optimizer
 
-Video Link to working Project
-https://www.youtube.com/watch?v=e1u4sZei_Jw
+Link to Submitted Project
+https://devpost.com/software/smart-miles
+
 
 <img width="1728" alt="Screenshot 2023-11-14 at 11 59 56 AM" src="https://github.com/gurpreet1998/SmarterMiles/assets/37729999/68576240-2529-4f40-87eb-9bca034a83b0">
 
